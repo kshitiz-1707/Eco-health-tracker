@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function ProfilePage({ user, setUser }) {
+export default function ProfilePage({ user }) {
   const [calorieTarget, setCalorieTarget] = useState(2000);
   const [proteinTarget, setProteinTarget] = useState(150);
   const [carbonLimit, setCarbonLimit] = useState(5);
@@ -38,7 +38,7 @@ export default function ProfilePage({ user, setUser }) {
           <label className="block text-sm text-gray-400">Name</label>
           <input
             type="text"
-            value={user?.name}
+            value={user?.name || ""}
             disabled
             className="w-full mt-1 px-4 py-2 rounded-lg bg-white text-black border border-gray-700"
           />
@@ -47,7 +47,7 @@ export default function ProfilePage({ user, setUser }) {
           <label className="block text-sm text-gray-400">Email</label>
           <input
             type="email"
-            value={user?.email}
+            value={user?.email || ""}
             disabled
             className="w-full mt-1 px-4 py-2 rounded-lg bg-white text-black border border-gray-700"
           />

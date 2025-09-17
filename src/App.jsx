@@ -48,7 +48,7 @@ export default function App() {
       {page === "home" && <Home user={user} />}
       {page === "upload" && <UploadPage />}
       {page === "analysis" && <AnalysisPage />}
-      {page === "profile" && <ProfilePage />}
+      {page === "profile" && <ProfilePage user={user} setUser={setUser} />}
     </div>
   );
 }
