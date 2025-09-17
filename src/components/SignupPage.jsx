@@ -6,7 +6,7 @@ export default function SignupPage({ onBack, onSwitch, onSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSuccess({ name, email }); // send user data to App
+    onSuccess({ name, email });
   };
 
   return (

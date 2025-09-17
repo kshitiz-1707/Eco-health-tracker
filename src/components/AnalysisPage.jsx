@@ -102,30 +102,30 @@ export default function AnalysisPage() {
 
   return (
     <div className="p-6 space-y-6 bg-gray-50 min-h-screen">
-      <h1 className="text-2xl font-bold">Dashboard</h1>
-      <p className="text-gray-500">Monday, September 15, 2025</p>
+      <h1 className="text-2xl font-bold">Analysis</h1>
+      <p className="text-gray-500">Thrusday, September 18, 2025</p>
 
       {/* Top Stats */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <ProgressCard
-          value={750}
-          target={5000}
+          value={1950}
+          target={3000}
           unit="kcal"
-          color="#22c55e"
+          color="#21808d"
           label="Calories"
         />
         <ProgressCard
-          value={55}
-          target={150}
+          value={75}
+          target={120}
           unit="g"
-          color="#a855f7"
+          color="#F2B418"
           label="Protein"
         />
         <ProgressCard
           value={0.8}
-          target={5}
+          target={2}
           unit="kg"
-          color="#3b82f6"
+          color="#ff5459"
           label="Carbon"
         />
       </div>
@@ -135,15 +135,50 @@ export default function AnalysisPage() {
         <WeeklyChart
           title="Weekly Calorie Intake"
           data={calorieData}
-          color="#22c55e"
+          color="#21808d"
           unit="kcal"
         />
         <WeeklyChart
           title="Weekly Carbon Footprint"
           data={carbonData}
-          color="#3b82f6"
+          color="#ff5459"
           unit="kg"
         />
+      </div>
+       {/* Recent Meals */}
+      <div className="flex flex-col gap-4 p-6 bg-white rounded-xl border-1 border-black shadow mx-6 mb-6 ">
+        <div className="flex justify-between items-center mb-4">
+          <h2 className="font-semibold text-2xl ">Recent Meals</h2>
+        </div>
+        <div className=" bg-[#b4530926] flex justify-between items-center py-2 w-full h-auto rounded-lg">
+          <div>
+            <h2 className="font-medium ml-4">Avocado Toast</h2>
+            <p className=" font-light text-sm mr-4 ml-4"> BreakFast : 18-09-2025</p>
+          </div>
+            <span className="text-[#32b8c6] font-medium text-sm mr-4">500 kcal</span>
+        </div>
+        <div className="bg-[#b4530926] flex justify-between items-center py-2 w-full h-auto  rounded-lg">
+          <div>
+            <h2 className="font-medium ml-4">Quesadilla</h2>
+            <p className=" font-light text-sm mr-4 ml-4"> Lunch : 18-09-2025</p>
+          </div>
+            <span className="text-[#32b8c6] font-medium text-sm mr-4">450 kcal</span>
+        </div>
+        <div className="bg-[#b4530926] flex justify-between items-center py-2 w-full h-auto  rounded-lg">
+          <div>
+            <h2 className="font-medium ml-4">Margherita Pizza</h2>
+            <p className=" font-light text-sm mr-4 ml-4"> Snack : 18-09-2025</p>
+          </div>
+            <span className=" text-[#32b8c6] font-medium text-sm mr-4">600 kcal</span>
+        </div>
+        <div className="bg-[#b4530926] flex justify-between items-center py-2 w-full h-auto  rounded-lg">
+          <div>
+            <h2 className="font-medium ml-4">Aglio E Olio</h2>
+            <p className=" font-light text-sm mr-4 ml-4"> Dinner : 18-09-2025</p>
+          </div>
+            <span className=" text-[#32b8c6] font-medium text-sm mr-4">400 kcal</span>
+        </div>
+        
       </div>
     </div>
   );

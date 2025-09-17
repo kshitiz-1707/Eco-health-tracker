@@ -10,10 +10,11 @@ import Navbar from "./components/Navbar";
 
 export default function App() {
   const [page, setPage] = useState("landing");
+  const [user, setUser] = useState(null); // store user info
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Show Navbar on all pages except landing/login/signup */}
+      {/* Show Navbar only after login/signup */}
       {page !== "landing" && page !== "signup" && page !== "login" && (
         <Navbar setPage={setPage} />
       )}
@@ -25,12 +26,26 @@ export default function App() {
         />
       )}
       {page === "signup" && (
-        <SignupPage onBack={() => setPage("landing")} onSwitch={() => setPage("login")} onSuccess={() => setPage("home")} />
+        <SignupPage
+          onBack={() => setPage("landing")}
+          onSwitch={() => setPage("login")}
+          onSuccess={(userData) => {
+            setUser(userData);
+            setPage("home");
+          }}
+        />
       )}
       {page === "login" && (
-        <LoginPage onBack={() => setPage("landing")} onSwitch={() => setPage("signup")} onSuccess={() => setPage("home")} />
+        <LoginPage
+          onBack={() => setPage("landing")}
+          onSwitch={() => setPage("signup")}
+          onSuccess={(userData) => {
+            setUser(userData);
+            setPage("home");
+          }}
+        />
       )}
-      {page === "home" && <Home />}
+      {page === "home" && <Home user={user} />}
       {page === "upload" && <UploadPage />}
       {page === "analysis" && <AnalysisPage />}
       {page === "profile" && <ProfilePage />}

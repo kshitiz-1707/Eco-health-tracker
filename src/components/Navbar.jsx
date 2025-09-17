@@ -11,14 +11,19 @@ export default function Navbar({ setPage }) {
   ];
 
   return (
-    <nav className="bg-green-600 text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="  bg-green-600 text-white shadow-md">
+      <div className=" max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
-          {/* Logo / Brand */}
           <div
             onClick={() => setPage("landing")}
-            className="cursor-pointer text-lg sm:text-xl font-bold"
+            className="cursor-pointer text-lg sm:text-xl font-bold flex items-center gap-2"
           >
+            <div className=" bg-green-600 ">
+              <img src="logo.png"
+                alt="eco health"
+                className="w-10 h-10 rounded-full"
+              ></img>
+            </div>
             EcoHealth
           </div>
 

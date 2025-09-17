@@ -5,7 +5,6 @@ export default function LoginPage({ onBack, onSwitch, onSuccess }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // for now we only use email to greet
     onSuccess({ name: "User", email });
   };
 
