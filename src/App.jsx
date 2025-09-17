@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import LandingPage from "./components/LandingPage";
 import SignupPage from "./components/SignupPage";
 import LoginPage from "./components/LoginPage";
-import Home from "./components/home";
+import Home from "./components/Home";
 import UploadPage from "./components/UploadPage";
 import AnalysisPage from "./components/AnalysisPage";
 import ProfilePage from "./components/ProfilePage";

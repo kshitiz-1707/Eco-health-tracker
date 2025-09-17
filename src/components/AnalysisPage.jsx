@@ -109,7 +109,7 @@ export default function AnalysisPage() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <ProgressCard
           value={750}
-          target={2000}
+          target={5000}
           unit="kcal"
           color="#22c55e"
           label="Calories"
