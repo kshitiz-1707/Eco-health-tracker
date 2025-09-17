@@ -7,7 +7,6 @@ export default function Navbar({ setPage }) {
     { name: "Home", page: "home" },
     { name: "Upload", page: "upload" },
     { name: "Analysis", page: "analysis" },
-    { name: "History", page: "history" },
     { name: "Profile", page: "profile" },
   ];
 

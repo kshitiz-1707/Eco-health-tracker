@@ -2,10 +2,9 @@ import React, { useState } from "react";
 import LandingPage from "./components/LandingPage";
 import SignupPage from "./components/SignupPage";
 import LoginPage from "./components/LoginPage";
-import Home from "./components/Home";
+import Home from "./components/home";
 import UploadPage from "./components/UploadPage";
 import AnalysisPage from "./components/AnalysisPage";
-import HistoryPage from "./components/HistoryPage";
 import ProfilePage from "./components/ProfilePage";
 import Navbar from "./components/Navbar";
 
@@ -34,7 +33,6 @@ export default function App() {
       {page === "home" && <Home />}
       {page === "upload" && <UploadPage />}
       {page === "analysis" && <AnalysisPage />}
-      {page === "history" && <HistoryPage />}
       {page === "profile" && <ProfilePage />}
     </div>
   );
